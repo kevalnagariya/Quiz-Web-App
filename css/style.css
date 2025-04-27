@@ -1,0 +1,306 @@
+/* ---------------------------
+   Base Styles
+---------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Reusable Container */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* ---------------------------
+   Buttons
+---------------------------- */
+button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    margin: 8px 4px 8px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Specific Button Styles */
+.edit-btn {
+    background: #f39c12;
+}
+
+.edit-btn:hover {
+    background: #e67e22;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    margin-left: 8px;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+#cancel-edit {
+    background: #95a5a6;
+}
+
+/* ---------------------------
+   Links
+---------------------------- */
+a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------
+   Quiz Page Styles
+---------------------------- */
+
+/* Start Screen */
+#start-screen {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Quiz Container */
+#quiz-container {
+    margin-top: 20px;
+}
+
+/* Question */
+.question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: black;
+}
+
+.option:hover {
+    background: #f0f0f0;
+}
+
+/* Option Correct & Incorrect */
+.option.correct {
+    background: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
+}
+
+.option.incorrect {
+    background: #e74c3c;
+    color: #fff;
+    border-color: #e74c3c;
+}
+
+/* Progress Indicator */
+#progress {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 15px 0;
+}
+
+/* Results */
+#results-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#results-container h2 {
+    margin-bottom: 10px;
+}
+
+/* ---------------------------
+   Admin Panel Styles
+---------------------------- */
+
+/* Admin Sections */
+.admin-section {
+    margin-bottom: 40px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+/* Textarea Specific */
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Question List */
+.question-item {
+    background: #f8f9fa;
+    padding: 15px 40px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+    border-radius: 6px;
+}
+
+.question-item h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Question Actions */
+.question-actions {
+    margin-top: 10px;
+}
+
+/* ---------------------------
+   Footer
+---------------------------- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* ---------------------------
+   Responsive Design
+---------------------------- */
+@media (max-width: 768px) {
+    /* Utility Classes for small screens */
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        width: 30%;
+        margin-top: 10px;
+    }
+
+    .options {
+        gap: 8px;
+    }
+
+    /* Flexbox for Layout Adjustments */
+    .question-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Utility Classes for Extra Small Screens */
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    .option {
+        padding: 10px;
+    }
+
+    #question-container button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #start-screen button {
+        width: 40%;
+        margin-top: 10px;
+    }
+
+    #clear-all{
+        width: 40%;
+    }
+
+    /* Adjust Button Size */
+    .edit-btn, .delete-btn {
+        width: 40%;
+    }
+
+    /* Form Elements */
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Adjust Textarea */
+    textarea {
+        font-size: 14px;
+    }
+
+}

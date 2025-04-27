@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags for better discoverability -->
+    <meta name="description" content="Challenge yourself with our fun, interactive quiz app!">
+    <meta name="keywords" content="Quiz, Online Quiz, Quiz App, Knowledge Test, Trivia">
+    <meta name="author" content="Keval Nagariya">
+
+    <!-- Title shown on browser tab -->
+    <title>Quiz App | Test Your Knowledge</title>
+
+    <!-- Linking external CSS for styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header section with app title -->
+    <header>
+        <div class="container">
+            <h1>Quiz App</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Start screen with welcome text, start button, and link to admin panel -->
+        <section id="start-screen" class="container">
+            <p>Test your knowledge with random questions!</p>
+            <button id="start-btn" aria-label="Start the quiz">Start Quiz</button>
+            <nav>
+                <!-- Link to admin panel for managing quiz content -->
+                <a href="admin.html" class="admin-link" aria-label="Go to admin panel">Admin Panel</a>
+            </nav>
+        </section>
+
+        <!-- Quiz container, initially hidden until the quiz starts -->
+        <section id="quiz-container" class="container hidden" aria-live="polite">
+            <!-- Div where the current question will be displayed -->
+            <div id="question-container"></div>
+            <!-- Button to go to the next question, hidden by default -->
+            <button id="next-btn" class="hidden">Next</button>
+            <!-- Progress bar or text will be shown here -->
+            <div id="progress"></div>
+        </section>
+
+        <!-- Results container, initially hidden, shown after the quiz ends -->
+        <section id="results-container" class="container hidden" aria-live="polite"></section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Quiz App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Linking external JavaScript for quiz functionality -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags for better discoverability -->
+    <meta name="description" content="Admin panel for managing quiz questions. Add, edit, or delete questions easily.">
+    <meta name="keywords" content="Quiz Admin, Manage Quiz, Quiz Questions, Admin Dashboard">
+    <meta name="author" content="Keval Nagariya">
+
+    <!-- Page Title -->
+    <title>Quiz Admin Panel | Manage Questions</title>
+
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header section with Admin Panel title and navigation link -->
+    <header>
+        <div class="container">
+            <h1>Quiz Admin</h1>
+            <nav>
+                <!-- Link back to the main Quiz page -->
+                <a href="index.html" class="back-link" aria-label="Back to quiz">← Back to Quiz</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section for Adding or Editing a Question -->
+        <section class="admin-section">
+            <h2>Add / Edit Question</h2>
+
+            <!-- Form for adding/editing quiz questions -->
+            <form id="question-form">
+                <!-- Hidden input to store ID when editing a question -->
+                <input type="hidden" id="edit-id">
+
+                <!-- Textarea for entering the question -->
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <textarea id="question" required placeholder="Enter your question here"></textarea>
+                </div>
+
+                <!-- Input fields for options A, B, C, D -->
+                <div class="form-group">
+                    <label>Options:</label>
+                    <input type="text" id="optionA" placeholder="Option A" required>
+                    <input type="text" id="optionB" placeholder="Option B" required>
+                    <input type="text" id="optionC" placeholder="Option C" required>
+                    <input type="text" id="optionD" placeholder="Option D" required>
+                </div>
+
+                <!-- Dropdown to select the correct answer -->
+                <div class="form-group">
+                    <label for="answer">Correct Answer:</label>
+                    <select id="answer" required>
+                        <option value="">Select</option>
+                        <option value="0">A</option>
+                        <option value="1">B</option>
+                        <option value="2">C</option>
+                        <option value="3">D</option>
+                    </select>
+                </div>
+
+                <!-- Buttons to save or cancel editing -->
+                <button type="submit">Save</button>
+                <button type="button" id="cancel-edit" class="hidden">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Section for displaying the list of all added questions -->
+        <section class="admin-section">
+            <h2>Existing Questions</h2>
+            <!-- Button to clear all questions -->
+            <button id="clear-all">Clear All</button>
+            <!-- Container where the list of questions will be shown -->
+            <div id="question-list"></div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Quiz Admin Panel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript for admin functionality -->
+    <script src="js/admin.js"></script>
+</body>
+</html>
