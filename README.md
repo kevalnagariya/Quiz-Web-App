@@ -77,4 +77,4 @@ _No server setup is required! It works entirely in the browser using local stora
 
 ## 🧑‍💻 Author
 
-- Created with ❤️ by **[Keval Nagariya]** 
+- Created with ❤️ by **Keval Nagariya** 
