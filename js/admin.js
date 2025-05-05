@@ -137,3 +137,11 @@ function getQuestions() {
 function saveQuestions(questions) {
     localStorage.setItem('quiz_questions', JSON.stringify(questions));
 }
+
+// Handle "Back to Quiz" button click: navigate to index.html without adding a new entry to the browser's history.
+// This prevents the user from returning to admin.html when using the browser's back button.
+document.getElementById('back-to-quiz').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.replace('index.html');
+});
+
